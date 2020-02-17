@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <link rel="stylesheet" href="/public/css/master.css"> -->
+    <title>Document</title>
+
+</head>
+<style>
+    .container {
+        width: 40%;
+        margin: 0 auto;
+        height: 100px;
+        text-align: center;
+    }
+
+    .ghost-input {
+        width: 80%;
+        border-top: none;
+        border-left: none;
+        border-right: none;
+        font-size: 30px;
+    }
+    .titulo {
+        font-size: 40px;
+    }
+
+</style>
+
+<body>
+    <div class="container">
+        <h1 class="titulo"> Pronostico </h1>
+        <section class="formulario">
+            <form action="/" method="post">
+                <input type="text" name="city" class="ghost-input" placeholder="Enter a city" id="" required>
+                <br>
+                <br>
+                <input type="submit" class="ghost-button" value="Get Wather">
+            </form>
+            <% if(weather !== null){  %>
+            <p><%=weather%></p>
+            <% } %>
+            <% if(error !== null){ %>
+            <p><%= error  %></p>
+            <% } %>
+        </section>
+    </div>
+</body>
+
+</html>
